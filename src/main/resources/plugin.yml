@@ -1,0 +1,11 @@
+name: AntiOP
+version: '${project.version}'
+main: com.tunagohan.AntiOP
+api-version: 1.18
+authors: [ tunagohan ]
+description: This plugin will detect and disable the OP itself.
+website: https://github.com/tunagohan/AntiOP
+commands:
+  antiop:
+    usage: /<command>
+    description: enable
