@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 
 public class Commands implements CommandExecutor {
 
-    AntiOP m = AntiOP.instance;
+    AntiOP antiop = AntiOP.instance;
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Use /antiop send
@@ -32,10 +32,9 @@ public class Commands implements CommandExecutor {
 
             // Reload
             if (args[0].equalsIgnoreCase("reload")) {
-                m.config.reload();
+                antiop.config.reload();
+                antiop.reloadConfig();
                 sender.sendMessage(antiopConsoleMsg("Plugin reloaded"));
-                Bukkit.getPluginManager().disablePlugin(m);
-                Bukkit.getPluginManager().enablePlugin(m);
                 return true;
             }
         }
