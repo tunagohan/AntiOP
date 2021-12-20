@@ -15,10 +15,6 @@ public class Config extends YamlConfiguration {
     private final String defaults;
     private final JavaPlugin plugin;
 
-    public Config(JavaPlugin plugin, String fileName) {
-        this(plugin, fileName, null);
-    }
-
     public Config(JavaPlugin plugin, String fileName, String defaultsName) {
         this.plugin = plugin;
         this.defaults = defaultsName;
